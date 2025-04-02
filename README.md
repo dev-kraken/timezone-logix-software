@@ -14,12 +14,12 @@ The `set_timezone.sh` script performs the following tasks:
 
 1. **Host the Script:**  
    Push the `set_timezone.sh` script to your Git repository. For example, if hosted on GitHub, the raw file URL might be:  
-   `https://raw.githubusercontent.com/gitcontentuser/your-repo/main/set_timezone.sh`
+   `https://raw.githubusercontent.com/dev-kraken/timezone-logix-software/main/settimezone.sh`
 
 2. **Run via Curl:**  
    In your Alpine-based Docker container, you can download and execute the script with:
    ```sh
-   curl -s https://raw.githubusercontent.com/gitcontentuser/your-repo/main/set_timezone.sh | sh
+   curl -s https://raw.githubusercontent.com/dev-kraken/timezone-logix-software/main/settimezone.sh | sh
     ```
 3. **Using in a Dockerfile:**  
    Incorporate the script into your Dockerfile as follows:
@@ -28,7 +28,7 @@ The `set_timezone.sh` script performs the following tasks:
    
     # Install curl and run the timezone setup script
     RUN apk add --no-cache curl && \
-    curl -s https://raw.githubusercontent.com/gitcontentuser/your-repo/main/set_timezone.sh | sh && \
+    curl -s https://raw.githubusercontent.com/dev-kraken/timezone-logix-software/main/settimezone.sh | sh && \
     apk del curl
     
     CMD ["sh"]
